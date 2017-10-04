@@ -7,6 +7,7 @@ const port = 3000;
 
 
 app.use(bodyParser.json());
+app.use( express.static( __dirname + '/../public/build' ) );
 
 app.get("/api/messages", messCtrl.read);
 app.post("/api/messages", messCtrl.create)
